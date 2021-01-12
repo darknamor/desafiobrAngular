@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://desafiobr-angular.herokuapp.com/',
+  baseUrl: 'https://desafiobr.herokuapp.com/',
 };
