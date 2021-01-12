@@ -1,0 +1,19 @@
+<a class="login-logo" routerLink="/home"></a>
+<div class="login-form">
+  <h3 class="title">Crea tu cuenta</h3>
+  <form fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="loginUsuario(f)" #f="ngForm">
+    <mat-form-field>
+      <mat-label><label for="rut">RUT</label></mat-label>
+      <input matInput type="text" placeholder="Ingrese su Rut" name="rut" ngModel required/>
+      <mat-error>Este campo es obligatorio</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label><label for="name">Clave</label></mat-label>
+      <input matInput type="password" placeholder="Ingrese una clave" name="password" ngModel required/>
+      <mat-error>Este campo es obligatorio</mat-error>
+    </mat-form-field>
+    <div class="input-wrapper-button">
+      <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Ingresar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+.login-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 60px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 12px 0 rgba(196, 196, 196, 0.5);
+}
+.login-logo-inproduct {
+  display: flex;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 4%;
+  left: 7%;
+  display: block;
+  width: 180px;
+  height: 50px;
+  background-size: 100%;
+
+  background-image: url("../../../assets/resources/logo-bancoripley.svg");
+}
+.title {
+  font: 25.5px Arial, sans-serif;
+  padding: 20px 0 0;
+  text-align: left;
+  color: #434343;
+}
+.input-wrapper-button {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+button {
+  min-width: 220px;
+  line-height: 48px;
+}
+.back-buton {
+  text-align: right;
+  cursor: pointer;
+}

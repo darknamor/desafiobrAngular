@@ -1,0 +1,12 @@
+<div class="portal">
+  <div class="login-container">
+    <div class="image-welcome"></div>
+    <login-app class="login-box" *ngIf="registerUrl === 'login' && !estadoUsuario"></login-app>
+    <product-app (selectBalance)="navegacionMenu($event)" (logout)="closeSession()" class="login-box" *ngIf="estadoUsuario && !menuUsuario"></product-app>
+    <loadBalance-app (selectMenuIndex)="menuReset()" class="login-box" *ngIf="menuUsuario === 'loadBalance'"></loadBalance-app>
+    <withdrawBalance-app (selectMenuIndex)="menuReset()" class="login-box" *ngIf="menuUsuario === 'withdrawBalance'"></withdrawBalance-app>
+    <transfer-app (selectMenuIndex)="menuReset()" class="login-box" *ngIf="menuUsuario === 'transfer'"></transfer-app>
+    <movements-app (selectMenuIndex)="menuReset()" class="login-box" *ngIf="menuUsuario === 'movements'"></movements-app>
+    <register-app class="login-box" *ngIf="registerUrl === 'registro'"></register-app>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.portal {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  contain: layout size style;
+  overflow: hidden;
+  z-index: 0;
+}
+.login-container {
+  display: flex;
+  min-height: 100vh;
+}
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+  min-width: calc(60% + (40% - 570px));
+  height: 100vh;
+  min-height: 568px;
+  box-shadow: none;
+  background-color: #f8f8f8;
+}
+.image-welcome {
+  background: url("../../assets/resources/left.png") center/cover no-repeat;
+  width: 40%;
+  max-width: 570px;
+  height: 100vh;
+  min-height: 568px;
+}

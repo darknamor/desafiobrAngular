@@ -1,0 +1,27 @@
+<a class="login-logo-inproduct" routerLink="/home"></a>
+<div class="login-form">
+  <h3 class="title">Movimientos</h3>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="fecha">
+      <mat-header-cell *matHeaderCellDef>Fecha</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ (element.fecha) | date:'dd/MM/yyyy' }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="monto">
+      <mat-header-cell *matHeaderCellDef>Monto</mat-header-cell>
+      <mat-cell *matCellDef="let element">${{ element.monto }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="destino">
+      <mat-header-cell *matHeaderCellDef>Destino</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.destino }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="tipo">
+      <mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.tipo }}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <div class="back-buton" (click)="backToMenu()">
+    <span class="material-icons"> keyboard_backspace </span>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<a class="login-logo" routerLink="/home"></a>
+<div class="login-form">
+  <h3 class="title">Mi Cuenta</h3>
+  <div class="input-wrapper-button">
+    <button mat-raised-button color="primary" (click)="selectOption('loadBalance')">Carga de Saldo</button>
+  </div>
+  <div class="input-wrapper-button">
+    <button mat-raised-button color="primary" (click)="selectOption('withdrawBalance')">Retiro de Saldo</button>
+  </div>
+  <div class="input-wrapper-button">
+    <button mat-raised-button color="primary" (click)="selectOption('transfer')">Transferencia</button>
+  </div>
+  <div class="input-wrapper-button">
+    <button mat-raised-button color="primary" (click)="selectOption('movements')">Listado de movimientos</button>
+  </div>
+  <div class="logout-buton" (click)="cerrarSesion()">
+    <span class="material-icons">power_settings_new</span>
+  </div>
+</div>

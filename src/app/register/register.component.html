@@ -1,0 +1,30 @@
+<a class="login-logo" routerLink="/home"></a>
+<div class="login-form">
+  <h3 class="title">Crea tu cuenta</h3>
+  <form fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="registrarUsuario(fs)" #fs="ngForm">
+      <mat-form-field>
+        <mat-label><label for="name">Nombre</label></mat-label>
+        <input matInput type="text" placeholder="Ingrese su Nombre" name="name" ngModel required/>
+        <mat-error>Este campo es obligatorio</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label><label for="rut">RUT</label></mat-label>
+        <input matInput type="text" placeholder="Ingrese su Rut formato xxxxxxxxx-x" name="rut" ngModel required/>
+        <mat-error>Este campo es obligatorio</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label><label for="email">Correo</label></mat-label>
+        <input matInput type="email" ngModel  placeholder="Ingrese su correo" name="email" email ngModel required #emailInput="ngModel"/>
+        <mat-error *ngIf="emailInput.hasError('required')">Este campo es obligatorio</mat-error>
+        <mat-error *ngIf="!emailInput.hasError('required')">El correo es invalido</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label><label for="name">Clave</label></mat-label>
+        <input matInput type="password" placeholder="Ingrese una clave" name="password" ngModel required/>
+        <mat-error>Este campo es obligatorio</mat-error>
+      </mat-form-field>
+      <div class="input-wrapper-button">
+        <button mat-raised-button color="primary" type="submit" [disabled]="fs.invalid">Registrarse</button>
+      </div>
+  </form>
+</div>
